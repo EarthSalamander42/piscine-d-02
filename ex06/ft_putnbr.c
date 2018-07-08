@@ -6,39 +6,45 @@
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/05 15:36:26 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/06 23:15:53 by jmaguire         ###   ########.fr       */
+/*   Updated: 2018/07/07 15:37:52 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+void	ft_putchar(char c);
 void	ft_putnbr(int nb);
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putnbr(int nb)
 {
-	long num = nb;
-	if (num >= 0)
+	long nbr;
+
+	nbr = nb;
+	if (nbr >= 10)
 	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
-	else if (num < 0)
+	else if (nbr < 0)
 	{
-		else
-		{
-			while (num == -2147483648)
-			{
-				
-			}
-			num = -num;
-		}
+		ft_putchar('-');
+		nbr = nbr * (-1);
+		ft_putnbr(nbr);
+	}
+	else
+	{
+		ft_putchar(nbr + '0');
 	}
 }
 
 int		main(void)
 {
-	ft_putnbr(10);
-	ft_putnbr(100000000);
-	ft_putnbr(-4894654);
-	ft_putnbr(10);
-	ft_putnbr(-2147483648);
+	ft_putnbr(42);
+	ft_putnbr(-42);
 	return (0);
 }

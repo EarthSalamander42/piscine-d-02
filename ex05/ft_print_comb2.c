@@ -10,21 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-void	ft_printcomb2();
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_print_comb2(void)
 {
-	int a;
-	char b;
-	char c;
+	int		a;
+	char	b;
+	char	c;
 
 	a = 0;
 	while (a < 10000)
@@ -46,10 +36,4 @@ void	ft_print_comb2(void)
 		}
 		a++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_comb2();
-	return (0);
 }
