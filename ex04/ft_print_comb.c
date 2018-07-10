@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-
 void	ft_print_comb(void)
 {
 	int		hundreds;
@@ -32,8 +28,11 @@ void	ft_print_comb(void)
 				ft_putchar(hundreds);
 				ft_putchar(tens);
 				ft_putchar(units);
-				ft_putchar(',');
-				ft_putchar(' ');
+				if (hundreds != '7' || tens != '8' || units != '9')
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
 			}
 		}
 	}

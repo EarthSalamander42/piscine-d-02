@@ -10,25 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-
 void	ft_putnbr(int nb)
 {
 	long nbr;
 
 	nbr = nb;
+	if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr = nbr * (-1);
+	}
 	if (nbr >= 10)
 	{
 		ft_putnbr(nbr / 10);
 		ft_putnbr(nbr % 10);
-	}
-	else if (nbr < 0)
-	{
-		ft_putchar('-');
-		nbr = nbr * (-1);
-		ft_putnbr(nbr);
 	}
 	else
 	{
