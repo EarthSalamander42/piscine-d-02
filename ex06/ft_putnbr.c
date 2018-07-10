@@ -22,11 +22,11 @@ void	ft_putnbr(int nb)
 	}
 	if (nbr >= 10)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr('0' + nbr / 10);
+		ft_putnbr('0' + nbr % 10);
 	}
 	else
 	{
-		ft_putchar(nbr + '0');
+		ft_putchar('0' + nbr);
 	}
 }

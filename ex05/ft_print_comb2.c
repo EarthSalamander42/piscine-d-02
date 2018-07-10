@@ -28,11 +28,11 @@ void	ft_print_comb2(void)
 				ft_putchar(',');
 				ft_putchar(' ');
 			}
-			ft_putchar(48 + b / 10);
-			ft_putchar(48 + b % 10);
+			ft_putchar('0' + b / 10);
+			ft_putchar('0' + b % 10);
 			ft_putchar(' ');
-			ft_putchar(48 + c / 10);
-			ft_putchar(48 + c % 10);
+			ft_putchar('0' + c / 10);
+			ft_putchar('0' + c % 10);
 		}
 		a++;
 	}

@@ -12,9 +12,9 @@
 
 void	ft_print_comb(void)
 {
-	int		hundreds;
-	int		tens;
-	int		units;
+	char	hundreds;
+	char	tens;
+	char	units;
 
 	hundreds = 48 - 1;
 	while (++hundreds <= 57)
